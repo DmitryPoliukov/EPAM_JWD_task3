@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class ArrayPresentation {
     ConsoleInputData consoleInputData = new ConsoleInputData();
     public void printArray(int[][] array){
-        for(int i=0; i< array.length;i++){
+        for(int i = 0; i < array.length; i++) {
             System.out.println(Arrays.toString(array[i]));
         }
     }

@@ -3,7 +3,7 @@ package by.epamtc.poliukov.task03.task2.input;
 import java.util.Scanner;
 
 public class InputScanner {
-    private Scanner scanner = new java.util.Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
     public int intScanner(String message) {
         int number;
