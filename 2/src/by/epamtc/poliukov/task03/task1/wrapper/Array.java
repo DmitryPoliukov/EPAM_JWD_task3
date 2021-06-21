@@ -2,7 +2,6 @@ package by.epamtc.poliukov.task03.task1.wrapper;
 
 import by.epamtc.poliukov.task03.task1.exception.IncorrectIndexException;
 import by.epamtc.poliukov.task03.task1.exception.NonValidArrayException;
-import by.epamtc.poliukov.task03.task1.exception.OutOfBoundsArrayException;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -34,10 +33,10 @@ public class Array implements Serializable {
         this.data = data;
         this.length = data.length;
     }
-////заменить на итератор!!!!!!!!!!!!!!!!!!!!!!!!
     public int[] getData() {
         return data;
-    }
+    } //sorry for that, it's wrong
+
 
     private boolean isArrayValid(int[] data) {
         return data != null;
