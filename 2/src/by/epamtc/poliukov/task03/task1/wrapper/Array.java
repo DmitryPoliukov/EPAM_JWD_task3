@@ -35,7 +35,7 @@ public class Array implements Serializable {
     }
     public int[] getData() {
         return data;
-    } //sorry for that, it's wrong
+    } //I'm sorry for that, it's wrong
 
 
     private boolean isArrayValid(int[] data) {
