@@ -2,6 +2,7 @@ package by.epamtc.poliukov.task03.task1.wrapper;
 
 import by.epamtc.poliukov.task03.task1.exception.IncorrectIndexException;
 import by.epamtc.poliukov.task03.task1.exception.NonValidArrayException;
+import by.epamtc.poliukov.task03.task1.exception.OutOfBoundsArrayException;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -13,6 +14,7 @@ public class Array implements Serializable {
     private static final int MIN_ARRAY_LENGTH = 0;
     private int[] data;
     private int length;
+    private int currentLenght = 0;
 
     public Array() {
         data = new int[DEFAULT_ARRAY_LENGTH];
@@ -43,6 +45,18 @@ public class Array implements Serializable {
 
     public int getLength() {
         return data.length;
+    }
+    public void add(int number)  {
+        if(currentLenght < length) {
+            data[currentLenght] = number;
+            currentLenght++;
+        }
+    }
+
+    public void add(int number, int index)  {
+        if(index < length-1 && index > 0) {
+            data[index] = number;
+        }
     }
 
     public static int getDefaultArrayLength() {

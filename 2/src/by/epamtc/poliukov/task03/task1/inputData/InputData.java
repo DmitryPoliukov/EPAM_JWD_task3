@@ -12,8 +12,10 @@ public class InputData {
 
     public void fillFromConsole(Array array) {
         int[] data = array.getData();
+        int number;
         for(int i = 0; i < data.length; i++) {
-            data[i] = intScanner(String.format("Enter element №%d", i + 1));
+            number = intScanner(String.format("Enter element №%d", i + 1));
+            array.add(number);
         }
     }
 
@@ -32,8 +34,10 @@ public class InputData {
 
     public void fillRandom(Array array) {
         int[] data = array.getData();
+        int number;
         for(int i = 0; i < data.length; i++) {
-            data[i] = (int) ((Math.random() * Integer.MAX_VALUE) + Integer.MIN_VALUE / 2);
+            number = (int) ((Math.random() * Integer.MAX_VALUE) + Integer.MIN_VALUE / 2);
+            array.add(number, i);
         }
     }
 
@@ -41,10 +45,12 @@ public class InputData {
         int[] data = array.getData();
         String filePath = stringScanner("Enter the file path:");
         File file = new File(filePath);
+        int number;
         try {
-            Scanner scanner = new Scanner(file);
+            Scanner fileScanner = new Scanner(file);
             for(int i = 0; i < data.length; i++) {
-                data[i] = scanner.nextInt();
+                number = fileScanner.nextInt();
+                array.add(number, i);
             }
         } catch (FileNotFoundException e) {
             e.getMessage();
