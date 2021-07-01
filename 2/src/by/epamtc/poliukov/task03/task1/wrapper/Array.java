@@ -6,14 +6,14 @@ import by.epamtc.poliukov.task03.task1.exception.NonValidArrayException;
 import java.io.Serializable;
 import java.util.Arrays;
 
-public class Array implements Serializable {
+public class Array implements Serializable{
     private static final long serialVersionUID = 1L;
 
     private static final int DEFAULT_ARRAY_LENGTH = 5;
     private static final int MIN_ARRAY_LENGTH = 0;
     private int[] data;
     private int length;
-    private int currentLenght = 0;
+    private int currentLength = 0;
 
     public Array() {
         data = new int[DEFAULT_ARRAY_LENGTH];
@@ -33,10 +33,6 @@ public class Array implements Serializable {
         this.data = data;
         this.length = data.length;
     }
-    public int[] getData() {
-        return data;
-    } //I'm sorry for that, it's wrong
-
 
     private boolean isArrayValid(int[] data) {
         return data != null;
@@ -45,15 +41,20 @@ public class Array implements Serializable {
     public int getLength() {
         return data.length;
     }
-    public void add(int number)  {
-        if(currentLenght < length) {
-            data[currentLenght] = number;
-            currentLenght++;
+
+    public int[] getData() {
+        return data;
+    }
+
+    public void setElement(int number)  {
+        if(currentLength < data.length) {
+            data[currentLength] = number;
+            currentLength++;
         }
     }
 
-    public void add(int number, int index)  {
-        if(index < length-1 && index > 0) {
+    public void setElement(int number, int index)  {
+        if(index < data.length-1 && index > 0) {
             data[index] = number;
         }
     }
@@ -85,7 +86,7 @@ public class Array implements Serializable {
     public int hashCode() {
         final int prime = 27;
         int result = 1;
-        result = prime * result + Arrays.hashCode(data);
+        result = prime * result + (data == null? 0 : Arrays.hashCode(data));
         return result;
     }
 
@@ -93,4 +94,5 @@ public class Array implements Serializable {
     public String toString() {
         return getClass().getSimpleName() + " [data=" + Arrays.toString(data) + "]";
     }
+
 }

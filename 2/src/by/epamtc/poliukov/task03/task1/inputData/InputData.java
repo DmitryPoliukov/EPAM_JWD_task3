@@ -1,6 +1,5 @@
 package by.epamtc.poliukov.task03.task1.inputData;
 
-import by.epamtc.poliukov.task03.task1.exception.NonValidArrayException;
 import by.epamtc.poliukov.task03.task1.wrapper.Array;
 
 import java.io.File;
@@ -11,9 +10,9 @@ public class InputData {
     Scanner scanner = new Scanner(System.in);
 
     public void fillFromConsole(Array array) {
-        int[] data = array.getData();
-        for(int i = 0; i < data.length; i++) {
-            data[i] = intScanner(String.format("Enter element №%d", i + 1));
+        for(int i = 0; i < array.getLength(); i++) {
+            int number = intScanner(String.format("Enter element №%d", i + 1));
+            array.setElement(number);
         }
     }
 
@@ -31,20 +30,19 @@ public class InputData {
     }
 
     public void fillRandom(Array array) {
-        int[] data = array.getData();
-        for(int i = 0; i < data.length; i++) {
-            data[i] = (int) ((Math.random() * Integer.MAX_VALUE) + Integer.MIN_VALUE / 2);
+        for(int i = 0; i < array.getLength(); i++) {
+            int number = (int) ((Math.random() * Integer.MAX_VALUE) + Integer.MIN_VALUE / 2);
+            array.setElement(number);
         }
     }
 
     public void fillFromFile(Array array) {
-        int[] data = array.getData();
-        String filePath = stringScanner("Enter the file path:");
-        File file = new File(filePath);
+        File file = new File(".\\by\\epamtc\\poliukov\\task03\\task1\\resources\\forFilling.txt");
         try {
             Scanner fileScanner = new Scanner(file);
-            for(int i = 0; i < data.length; i++) {
-                data[i] = fileScanner.nextInt();
+            for(int i = 0; i < array.getLength(); i++) {
+                int number = fileScanner.nextInt();
+                array.setElement(number);
             }
         } catch (FileNotFoundException e) {
             e.getMessage();

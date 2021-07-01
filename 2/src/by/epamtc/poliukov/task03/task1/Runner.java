@@ -7,7 +7,6 @@ import by.epamtc.poliukov.task03.task1.service.ArraySearchService;
 import by.epamtc.poliukov.task03.task1.service.ArraySortService;
 import by.epamtc.poliukov.task03.task1.wrapper.Array;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Runner {
@@ -24,7 +23,7 @@ public class Runner {
         inputData.fillFromConsole(fromConsole);
         Array initFromConstructor = null;
         try {
-            initFromConstructor = new Array(new int[]{1, 21, -87, 33, 44, -103, 7, 108});
+            initFromConstructor = new Array(new int[]{ 21, -87, 33, 44, -103, 1, 7, 108});
         } catch (NonValidArrayException e) {
         }
 
@@ -35,8 +34,9 @@ public class Runner {
         arraySortService.quickSort(fromConsole);
         System.out.println("Array from console quickSort " + fromConsole);
 
-        int indexBinarySearch = arraySearchService.binarySearch(fromConsole, 1);
+        int indexBinarySearch = arraySearchService.binarySearch(initFromConstructor, 108);
         System.out.println("Element index in binary search is " + indexBinarySearch);
+
 
         try {
             int maxValue = arraySearchService.findMaxElement(initFromConstructor);
@@ -56,9 +56,6 @@ public class Runner {
         } catch (NonValidArrayException e) {
             e.printStackTrace();
         }
-
-
-
     }
 }
 

@@ -9,12 +9,11 @@ import by.epamtc.poliukov.task03.task2.presentation.ArrayPresentation;
 import java.util.Comparator;
 
 
-public class Runner {
+public class  Runner {
     public static void main(String[] args) {
         ConsoleInputData consoleInputData = new ConsoleInputData();
         ArrayPresentation arrayPresentation = new ArrayPresentation();
         ArrayService arrayService = new ArrayService();
-
 
         int[][] jaggedArray = consoleInputData.enterArray();
         SortMethod method = consoleInputData.method();
