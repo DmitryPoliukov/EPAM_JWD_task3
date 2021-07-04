@@ -37,7 +37,7 @@ public class InputData {
     }
 
     public void fillFromFile(Array array) {
-        File file = new File(".\\by\\epamtc\\poliukov\\task03\\task1\\resources\\forFilling.txt");
+        File file = new File(".\\2\\src\\by\\epamtc\\poliukov\\task03\\task1\\resources\\forFilling.txt");
         try {
             Scanner fileScanner = new Scanner(file);
             for(int i = 0; i < array.getLength(); i++) {
