@@ -1,6 +1,5 @@
 package by.epamtc.poliukov.task03.task1;
 
-
 import by.epamtc.poliukov.task03.task1.exception.NonValidArrayException;
 import by.epamtc.poliukov.task03.task1.inputData.InputData;
 import by.epamtc.poliukov.task03.task1.service.ArraySearchService;
@@ -34,11 +33,9 @@ public class Runner {
         arraySortService.quickSort(fromConsole);
         System.out.println("Array from console quickSort " + fromConsole);
 
-        int indexBinarySearch = arraySearchService.binarySearch(initFromConstructor, 108);
-        System.out.println("Element index in binary search is " + indexBinarySearch);
-
-
         try {
+            int indexBinarySearch = arraySearchService.binarySearch(initFromConstructor, 108);
+            System.out.println("Element index in binary search is " + indexBinarySearch);
             int maxValue = arraySearchService.findMaxElement(initFromConstructor);
             int minValue = arraySearchService.findMinElement(initFromConstructor);
             System.out.println("Minimum in array is " + minValue);

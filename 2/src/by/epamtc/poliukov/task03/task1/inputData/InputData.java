@@ -48,9 +48,4 @@ public class InputData {
             e.getMessage();
         }
     }
-
-    public String stringScanner(String message) {
-        System.out.println(message);
-        return scanner.nextLine();
-    }
 }

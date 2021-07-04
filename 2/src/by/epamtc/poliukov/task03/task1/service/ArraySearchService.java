@@ -10,14 +10,15 @@ import java.util.List;
 import static by.epamtc.poliukov.task03.task1.validator.Validator.isNull;
 
 public class ArraySearchService {
-    Validator validator = new Validator();
 
-    public int binarySearch(Array array, int elementToSearch) {
+    public int binarySearch(Array array, int elementToSearch) throws NonValidArrayException {
         return binarySearch(array.getData(), elementToSearch);
     }
 
-
-    private int binarySearch(int[] sortArray, int elementToSearch) {
+    private int binarySearch(int[] sortArray, int elementToSearch) throws NonValidArrayException {
+        if (isNull(sortArray)) {
+            throw new NonValidArrayException("Array can't be null");
+        }
         int firstIndex = 0;
         int lastIndex = sortArray.length - 1;
 
@@ -139,13 +140,14 @@ public class ArraySearchService {
     }
 
     private boolean is3UniqueDigit(int number) {
-        if(!(number >= 100 && number <= 999)) {
+        int absoluteNumber = Math.abs(number);
+        if(!(absoluteNumber >= 100 && absoluteNumber <= 999)) {
             return false;
         }
 
-        int firstDigit = number / 100;
-        int secondDigit = (number / 10) % 10;
-        int thirdDigit = number % 10;
+        int firstDigit = absoluteNumber / 100;
+        int secondDigit = (absoluteNumber / 10) % 10;
+        int thirdDigit = absoluteNumber % 10;
         boolean result = firstDigit != secondDigit && firstDigit != thirdDigit && secondDigit != thirdDigit;
         return result;
     }
