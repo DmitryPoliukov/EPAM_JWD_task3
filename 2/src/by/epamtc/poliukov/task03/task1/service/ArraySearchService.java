@@ -1,13 +1,18 @@
 package by.epamtc.poliukov.task03.task1.service;
 
-import by.epamtc.poliukov.task03.task1.validator.Validator;
 import by.epamtc.poliukov.task03.task1.wrapper.Array;
 import by.epamtc.poliukov.task03.task1.exception.NonValidArrayException;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import static by.epamtc.poliukov.task03.task1.validator.Validator.isNull;
+
+/**
+ * The Class ArraySearchService contains methods for binary search, search prime numbers, fibonacci numbers,
+ * three-digit number with unique digits, methods for finding maximum and minimum value in array.
+ *
+ * @author Dmitry Poliukov
+ */
 
 public class ArraySearchService {
 

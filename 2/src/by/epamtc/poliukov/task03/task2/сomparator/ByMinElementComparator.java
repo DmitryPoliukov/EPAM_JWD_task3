@@ -1,7 +1,11 @@
 package by.epamtc.poliukov.task03.task2.сomparator;
 
 import java.util.Comparator;
-
+/**
+ * The Class ByByMaxElementComparator specifies function for comparing int[] by minimum element.
+ *
+ * @author Dmitry Poliukov
+ */
 public class ByMinElementComparator implements Comparator<int[]> {
     @Override
     public int compare(int[] o1, int[] o2) {

@@ -6,6 +6,11 @@ import by.epamtc.poliukov.task03.task1.exception.NonValidArrayException;
 import java.io.Serializable;
 import java.util.Arrays;
 
+/**
+ * The Class Array is a wrapper class over an array of integer.
+ *
+ * @author Dmitry Poliukov
+ */
 public class Array implements Serializable{
     private static final long serialVersionUID = 1L;
 

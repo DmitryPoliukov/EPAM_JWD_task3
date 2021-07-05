@@ -3,6 +3,11 @@ package by.epamtc.poliukov.task03.task2.data;
 import by.epamtc.poliukov.task03.task2.entity.SortMethod;
 import by.epamtc.poliukov.task03.task2.input.InputScanner;
 
+/**
+ * The Class ConsoleInputData reads data for initialization and selects sorting method from console.
+ *
+ * @author Dmitry Poliukov
+ */
 public class ConsoleInputData {
     private InputScanner inputScanner = new InputScanner();
     public int[][] enterArray() {

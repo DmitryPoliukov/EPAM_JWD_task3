@@ -2,6 +2,11 @@ package by.epamtc.poliukov.task03.task2.input;
 
 import java.util.Scanner;
 
+/**
+ * The Class InputScanner read integer or String data.
+ *
+ * @author Dmitry Poliukov
+ */
 public class InputScanner {
     private Scanner scanner = new Scanner(System.in);
 

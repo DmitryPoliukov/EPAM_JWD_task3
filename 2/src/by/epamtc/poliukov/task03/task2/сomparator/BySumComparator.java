@@ -1,7 +1,11 @@
 package by.epamtc.poliukov.task03.task2.сomparator;
 
 import java.util.Comparator;
-
+/**
+ * The Class ByByMaxElementComparator specifies function for comparing int[] by sum of their elements.
+ *
+ * @author Dmitry Poliukov
+ */
 public class BySumComparator implements Comparator<int[]> {
     @Override
     public int compare(int[] o1, int[] o2) {

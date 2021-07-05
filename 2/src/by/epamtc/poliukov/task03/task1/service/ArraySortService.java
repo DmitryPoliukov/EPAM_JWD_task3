@@ -1,10 +1,13 @@
 package by.epamtc.poliukov.task03.task1.service;
 
-import by.epamtc.poliukov.task03.task1.validator.Validator;
 import by.epamtc.poliukov.task03.task1.wrapper.Array;
 
+/**
+ * The Class ArraySortService contains methods for sorting Array array by selection sort, merge sort, quick sort.
+ *
+ * @author Dmitry Poliukov
+ */
 public class ArraySortService {
-    Validator validator = new Validator();
 
     public void selectionSortArray(Array array){
     selectionSortArray(array.getData());

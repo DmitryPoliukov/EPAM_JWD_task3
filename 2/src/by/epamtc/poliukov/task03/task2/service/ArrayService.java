@@ -9,8 +9,17 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The Class ArrayService sorts jagged array by the comparator, reverse array, creates Map with methods of sorting.
+ *
+ * @author Dmitry Poliukov
+ */
 public class ArrayService {
-
+    /**
+     * Sorting int[][] by Comparator.
+     * @param jaggedArray - int array
+     * @param arrayComparator - comparator
+     */
     public void sort(int[][] jaggedArray, Comparator<int[]> arrayComparator) {
         if (isNull(jaggedArray)) {
             return;

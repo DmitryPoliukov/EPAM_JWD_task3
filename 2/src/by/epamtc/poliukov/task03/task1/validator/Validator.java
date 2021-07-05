@@ -2,6 +2,11 @@ package by.epamtc.poliukov.task03.task1.validator;
 
 import by.epamtc.poliukov.task03.task1.wrapper.Array;
 
+/**
+ * The Class Validator check validity of the data.
+ *
+ * @author Dmitry Poliukov
+ */
 public class Validator {
 
     public static boolean isNull(Array array) {
